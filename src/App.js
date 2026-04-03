@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Timer from "./Timer";
+import Controls from "./Controls";
+import "./styles.css";
 
 function App() {
+  const [time, setTime] = useState(1500); // 25 minutes
+  const [isRunning, setIsRunning] = useState(false);
+  const [mode, setMode] = useState("work");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <h1>Pomodoro Timer</h1>
+
+      <Timer
+        time={time}
+        setTime={setTime}
+        isRunning={isRunning}
+        mode={mode}
+        setMode={setMode}
+      />
+
+      <Controls
+        isRunning={isRunning}
+        setIsRunning={setIsRunning}
+        setTime={setTime}
+      />
     </div>
   );
 }
