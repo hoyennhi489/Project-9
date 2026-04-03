@@ -6,10 +6,14 @@ function Timer({ time, setTime, isRunning, mode, setMode }) {
 
     if (isRunning) {
       interval = setInterval(() => {
-        setTime(time - 1);
+        setTime((prev) => prev - 1);
       }, 1000);
     }
 
+    return () => clearInterval(interval);
+  }, [isRunning, setTime]);
+
+  useEffect(() => {
     if (time === 0) {
       if (mode === "work") {
         setMode("break");
@@ -19,9 +23,7 @@ function Timer({ time, setTime, isRunning, mode, setMode }) {
         setTime(1500);
       }
     }
-
-    return () => clearInterval(interval);
-  }, [isRunning]);
+  }, [time, mode, setMode, setTime]);
 
   const formatTime = () => {
     const minutes = Math.floor(time / 60);
