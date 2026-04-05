@@ -26,3 +26,23 @@ Through this task, I gained a better understanding of:
 * The importance of using proper dependencies in `useEffect`
 
 Overall, this was a challenging but valuable learning experience. I feel more confident working with React hooks now.
+
+---
+
+### Learning Journal – Day 2 (Fixing Control Logic)
+
+Today, I continued improving the Pomodoro Timer application, focusing on the control features (Start, Pause, Reset).
+
+I noticed that the Reset function was not working correctly. When I pressed Reset, the time returned to 25 minutes, but the timer kept running. This created a poor user experience.
+
+After reviewing the logic, I realized that resetting the time alone was not enough. The timer was still running because the `isRunning` state remained true.
+
+To fix this, I updated the Reset function by stopping the timer first, and then resetting the time. This helped the application behave as expected.
+
+From this task, I learned that:
+
+* State in React needs to be controlled consistently
+* It’s not enough to change data — you also need to control behavior
+* Control logic is just as important as the UI
+
+After applying these changes, the application became more accurate and easier to use.
