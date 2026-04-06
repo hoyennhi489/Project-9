@@ -46,3 +46,23 @@ From this task, I learned that:
 * Control logic is just as important as the UI
 
 After applying these changes, the application became more accurate and easier to use.
+
+---
+
+### Learning Journal – Day 3 (UI and Display Improvements)
+
+Today, I completed the Pomodoro Timer application by improving the user interface and time display.
+
+Previously, the timer displayed time in an unclean format, such as “5:3” instead of “05:03”. This made the application look less professional.
+
+I fixed this by using the `padStart` method to ensure that both minutes and seconds are always displayed with two digits.
+
+In addition, I made small UI adjustments to help users easily recognize the current mode (working or break), such as changing colors for each mode.
+
+From today’s work, I learned that:
+
+* User experience (UX) is very important
+* Small details can make a big difference
+* A good application should not only work correctly but also be easy to look at and use
+
+After three days, I successfully completed the Pomodoro Timer application and gained a better understanding of React hooks and state management.
